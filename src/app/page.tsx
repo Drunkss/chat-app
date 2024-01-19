@@ -16,16 +16,16 @@ const page = () => {
   async function testfn(){
     setClick(true)
     const message = await axios.get("/api/socket/test") 
-    return msg
+   return msg
   }
 
   useEffect(()=>{
     if(!socket) return
 
-    socket.on("message",(val : string) => {
+    socket.on("message",(val : { msg: string }) => {
       setmsg(val.msg)
     })
-  },[click])
+  },[socket])
 
   return (
     <div className="p-[10rem] font-bold text-3xl">
