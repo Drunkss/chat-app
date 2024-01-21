@@ -25,7 +25,7 @@ const page = () => {
     socket.on("message",(val : { msg: string }) => {
       setmsg(val.msg)
     })
-  },[socket])
+  },[click])
 
   return (
     <div className="p-[10rem] font-bold text-3xl">
