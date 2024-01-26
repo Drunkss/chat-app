@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
-import { Nunito } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import { SocketProvider } from '@/components/Providers/socket-provider'
 
-const nunito = Nunito({ subsets: ['latin'] })
+//const nunito = Nunito({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -17,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
+      <body className={inter.className}>
         <SocketProvider>
           {children}
         </SocketProvider>

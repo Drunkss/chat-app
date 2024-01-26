@@ -6,7 +6,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponseServerInfo
 ){
-  res?.socket?.server?.io?.of("/hi").emit("message",{
+  res?.socket?.server?.io?.socketsJoin("room1")
+  res?.socket?.server?.io?.emit("message",{
     msg: "Hello"
   })
 

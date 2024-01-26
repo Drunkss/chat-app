@@ -15,7 +15,7 @@ const page = () => {
 
   async function testfn(){
     setClick(true)
-    const message = await axios.get("/api/socket/test") 
+    await axios.get("/api/socket/test") 
    return msg
   }
 

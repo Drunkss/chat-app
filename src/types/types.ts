@@ -9,3 +9,9 @@ export type NextApiResponseServerInfo = NextApiResponse & {
     }
   }
 }
+
+export type messages = {
+  author: String;
+  content: String;
+  date: String;
+}
